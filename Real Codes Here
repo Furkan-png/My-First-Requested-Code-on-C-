@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Uygulama_14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double hız;
+            double süre;
+            double dosya;
+
+            Console.Write("İnternet hızınızı mb/s (Megabyte per second) biriminde giriniz -> ");
+            hız = Convert.ToDouble(Console.ReadLine());
+            
+            Console.Write("İndirilecek dosyayı Gb formunda giriniz -> ");
+            dosya = Convert.ToDouble(Console.ReadLine());
+
+            dosya = dosya * 1000;
+
+            süre = dosya / hız;
+
+            süre = süre / 60;
+
+            süre = süre / 60;
+
+            Console.WriteLine("Hedef dosya sabit internet hızı ile yaklaşık olarak {0} saatte indirilecektir.", süre);
+            Console.ReadKey();
+            
+               
+        }
+    }
+}
